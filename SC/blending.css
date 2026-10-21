@@ -1,0 +1,63 @@
+/* Shared surface harmony. These layers never change content geometry. */
+:root {
+  --flow-top: color-mix(in srgb, var(--accent-soft) 5%, var(--bg));
+  --flow-border: color-mix(in srgb, var(--line) 62%, var(--panel));
+  --flow-surface: color-mix(in srgb, var(--accent-soft) 2%, var(--panel));
+  --flow-shadow: 0 8px 26px -12px rgb(0 0 0 / 24%);
+  --hero-direction: 90deg;
+}
+:root[data-theme=light] {
+  --flow-top: color-mix(in srgb, var(--accent-soft) 10%, var(--bg));
+  --flow-shadow: 0 8px 26px -12px rgb(55 48 35 / 14%);
+}
+html[dir=rtl] { --hero-direction: 270deg; }
+body, .guest-home, html[data-theme=light] .guest-home {
+  background-color: var(--bg);
+  background-image: linear-gradient(180deg, var(--flow-top), var(--bg) 640px);
+  background-repeat: no-repeat;
+}
+.scms .topbar, .guest-header, html[data-theme=light] .guest-header {
+  background: linear-gradient(180deg,
+    color-mix(in srgb, var(--header-bg) 65%, var(--flow-top)),
+    color-mix(in srgb, var(--header-bg) 8%, var(--flow-top)));
+  border-color: color-mix(in srgb, var(--line) 35%, transparent);
+  box-shadow: 0 14px 26px -26px rgb(0 0 0 / 28%);
+}
+.guest-hero {
+  border-color: color-mix(in srgb, var(--line) 50%, var(--bg));
+  box-shadow: 0 18px 40px -32px rgb(0 0 0 / 28%);
+}
+.guest-hero::before, html[data-theme=light] .guest-hero::before {
+  background: linear-gradient(var(--hero-direction),
+    color-mix(in srgb, var(--bg) 97%, transparent) 0%,
+    color-mix(in srgb, var(--bg) 91%, transparent) 44%,
+    color-mix(in srgb, var(--bg) 60%, transparent) 100%);
+}
+.guest-hero::after {
+  content: ''; position: absolute; inset: 0; z-index: -1; pointer-events: none;
+  background: linear-gradient(180deg,
+    color-mix(in srgb, var(--flow-top) 65%, transparent),
+    transparent 24%, transparent 74%,
+    color-mix(in srgb, var(--bg) 85%, transparent));
+}
+.guest-hero .chain-panel, html[data-theme=light] .guest-hero .chain-panel {
+  background: color-mix(in srgb, var(--flow-surface) 91%, transparent);
+  border-color: var(--flow-border); box-shadow: var(--flow-shadow);
+}
+.guest-home :is(.guest-section, .about-section, .saudi-section, .help-section, .home-stat-section) {
+  background-image: radial-gradient(ellipse at 50% 50%,
+    color-mix(in srgb, var(--accent-soft) 4%, transparent), transparent 72%);
+  border-color: color-mix(in srgb, var(--line) 38%, transparent);
+}
+.scms .panel, .guest-feature, .home-glass, .guest-promotion,
+html[data-theme=light] :is(.panel, .scms .panel, .guest-feature, .guest-promotion, .login-card) {
+  background: var(--flow-surface); border-color: var(--flow-border);
+  box-shadow: var(--flow-shadow);
+}
+.scms-footer {
+  background: linear-gradient(180deg, transparent, var(--footer-bg) 85%);
+  border-color: color-mix(in srgb, var(--line) 42%, transparent);
+}
+html[data-contrast=high] :is(.scms .panel, .guest-feature, .home-glass, .chain-panel) {
+  border-color: var(--line);
+}

@@ -1,0 +1,9 @@
+.venv/
+.env
+.runtime/
+tools/
+backups/
+scms-verification/
+__pycache__/
+.pytest_cache/
+*.pyc

@@ -1,0 +1,15 @@
+.env
+.env.*
+.venv/
+.runtime/
+.git/
+tools/
+backups/
+fixtures/
+tests/
+scms-verification/
+.pytest_cache/
+**/__pycache__/
+**/*.pyc
+verify-*.cjs
+seed.py

@@ -1,0 +1,9 @@
+.guest-hero .hero-logistics-image{opacity:0;transition:opacity .45s ease;pointer-events:none}
+.guest-hero .hero-logistics-image.hero-image-visible{opacity:1}
+.chain-flow li{padding:0;animation:none}
+.chain-flow button{display:flex;align-items:center;gap:18px;width:100%;padding:12px 14px;border:0;border-radius:12px;background:transparent;color:var(--text);font:inherit;text-align:start;cursor:pointer}
+.chain-flow li.hero-step-active{border-color:var(--gold);background:color-mix(in srgb,var(--primary) 5.10%,transparent);box-shadow:inset 3px 0 0 var(--gold)}
+html[dir=rtl] .chain-flow li.hero-step-active{box-shadow:inset -3px 0 0 var(--gold)}
+.chain-flow li.hero-step-active strong{color:var(--gold)}
+.chain-flow button:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+@media(prefers-reduced-motion:reduce){.guest-hero .hero-logistics-image{transition:none}}

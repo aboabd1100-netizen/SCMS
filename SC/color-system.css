@@ -1,0 +1,68 @@
+/* SCMS industrial palette: one source for all component colors. */
+:root,:root[data-theme=dark]{
+ color-scheme:dark;--bg-main:#1C1C1C;--bg-secondary:#232323;--surface:#2A2A2A;--surface-elevated:#333333;
+ --primary:#2F855A;--primary-hover:#256B48;--secondary:#7A8B5A;--accent-soft:#D6C6A5;
+ --text-main:#F5F1E8;--text-secondary:#B8B2A7;--text-muted:#8F8A82;--border:#4A4741;--divider:#3A3834;
+ --success:#3FAE67;--warning:#D89B2B;--error:#C94A4A;--neutral:#7C7C7C;--on-primary:#FFFFFF;
+ --sidebar-bg:var(--bg-main);--header-bg:var(--bg-secondary);--input-bg:var(--bg-secondary);--footer-bg:var(--bg-main);
+ --hover:color-mix(in srgb,var(--secondary) 12%,var(--bg-secondary));--interactive-text:color-mix(in srgb,var(--primary) 65%,var(--text-main));
+ --bg:var(--bg-main);--bg-2:var(--bg-secondary);--panel:var(--surface);--panel-strong:var(--surface-elevated);--card:var(--surface-elevated);
+ --accent:var(--primary);--gold:var(--primary);--gold-strong:var(--primary-hover);--gold-fill:var(--primary);
+ --text:var(--text-main);--muted:var(--text-secondary);--soft:var(--text-muted);--line:var(--border);--line-strong:color-mix(in srgb,var(--primary) 50%,var(--border));
+ --green:var(--success);--amber:var(--warning);--red:var(--error);--shadow:0 16px 48px rgb(0 0 0 / 22%);
+ --overlay:rgb(20 20 20 / 68%);--chart-1:var(--primary);--chart-2:var(--secondary);--chart-3:var(--accent-soft);--chart-4:var(--neutral);
+}
+:root[data-theme=light]{
+ color-scheme:light;--bg-main:#F3F0E8;--bg-secondary:#EAE5D9;--surface:#FFFFFF;--surface-elevated:#FFFFFF;
+ --text-main:#222222;--text-secondary:#6F6A61;--text-muted:#918A80;--border:#D8D2C4;--divider:#E2DDD2;
+ --sidebar-bg:var(--surface);--header-bg:var(--surface);--input-bg:var(--surface);--footer-bg:var(--bg-secondary);
+ --hover:color-mix(in srgb,var(--secondary) 9%,var(--surface));--interactive-text:var(--primary);--shadow:0 12px 36px rgb(34 34 34 / 8%);
+}
+html,body,.guest-home,html[data-theme=light] .guest-home{background:var(--bg);color:var(--text)}
+.scms .sidebar,html[data-theme=light] .sidebar{background:var(--sidebar-bg);border-color:var(--line)}
+.scms .topbar,.guest-header,html[data-theme=light] .guest-header{background:var(--header-bg);color:var(--text);border-color:var(--line)}
+.scms .panel,.guest-feature,.home-glass,.chain-panel,.guest-promotion,html[data-theme=light] :is(.panel,.scms .panel,.chain-panel,.guest-feature,.guest-promotion,.login-card){background:var(--panel);border-color:var(--line)}
+.scms :is(dialog,.profile-dropdown,.toast),.display-dialog,.home-offer-dialog{background:var(--panel-strong);color:var(--text);border-color:var(--line)}
+.scms .primary-btn,.guest-home .guest-button,.login-btn,.confirm-submit.confirm-primary{background:var(--primary);color:var(--on-primary);border-color:transparent;box-shadow:none}
+.scms .primary-btn:hover,.guest-home .guest-button:hover,.login-btn:hover,.confirm-submit.confirm-primary:hover,html[data-theme=light] .scms .primary-btn:hover,html[data-theme=light] .guest-home .guest-button:hover{background:var(--primary-hover);color:var(--on-primary)}
+.guest-home .guest-button.secondary,.scms .secondary-btn{background:transparent;color:var(--interactive-text);border-color:var(--secondary)}
+.guest-home .guest-button.secondary:hover,.scms .secondary-btn:hover{background:var(--hover);color:var(--interactive-text);border-color:var(--secondary)}
+.scms :is(.nav-item.active,.lang-btn.active),.guest-languages button[aria-pressed=true],.home-city-list button[aria-pressed=true],.home-chart-switch button[aria-pressed=true]{background:color-mix(in srgb,var(--secondary) 12%,var(--panel));color:var(--interactive-text);border-color:var(--primary)}
+.scms .nav-item:hover,.scms .network-location:hover,.display-toggle:hover,.theme-toggle:hover{background:var(--hover);color:var(--interactive-text)}
+.scms .nav-item:not(.active) svg,.scms .topbar .bell,.scms .profile-chevron{color:var(--muted)}
+.scms .nav-item.active svg,.theme-toggle,html[data-theme=light] .theme-toggle{color:var(--interactive-text)}
+.theme-toggle,html[data-theme=light] .theme-toggle{background:var(--panel);border-color:var(--line)}
+.scms :is(input:not([type=checkbox]),select,textarea),.guest-tracking-controls input,.display-grid select,html[data-theme=light] .scms :is(input:not([type=checkbox]),select,textarea){background-color:var(--input-bg);color:var(--text);border-color:var(--line)}
+.scms :is(input,select,textarea):focus,.display-grid select:focus{border-color:var(--primary);box-shadow:0 0 0 3px color-mix(in srgb,var(--primary) 18%,transparent)}
+.scms input[type=checkbox]{accent-color:var(--primary)}.scms input[type=checkbox]:checked,.scms input[type=checkbox]:indeterminate{background:var(--primary);border-color:var(--primary)}.scms input[type=checkbox]::before{background:var(--on-primary);color:var(--on-primary)}
+.scms :is(th,.toolbar,.search-box){background:var(--bg-2);color:var(--muted);border-color:var(--line)}.scms tr:hover td{background:var(--hover)}.scms :is(th,td){border-color:var(--divider)}
+.scms :is(.bar-track,.shipment-steps span),.home-progress{background:var(--bg-2)}
+.scms .status.good,html[data-theme=light] .status.good{color:var(--success);background:color-mix(in srgb,var(--success) 12%,transparent)}
+.scms .status.warn,html[data-theme=light] .status.warn{color:var(--warning);background:color-mix(in srgb,var(--warning) 12%,transparent)}
+.scms .status.bad,html[data-theme=light] .status.bad{color:var(--error);background:color-mix(in srgb,var(--error) 12%,transparent)}
+.scms .status.gray,html[data-theme=light] .status.gray{color:var(--neutral);background:color-mix(in srgb,var(--neutral) 12%,transparent)}
+.scms .status:is(.good,.warn,.bad){border-color:currentColor}.scms .notice.good{border-color:var(--success)}.scms .notice.warn{border-color:var(--warning)}.scms .notice.bad{border-color:var(--error)}
+.scms .notice{color:var(--text);background:color-mix(in srgb,var(--accent-soft) 8%,var(--panel));border-inline-start-color:var(--secondary)}
+.scms :is(.subtle,.muted),.scms .page-header p,.guest-home :is(.home-section-note,.hero-note,.chain-description){color:var(--muted)}
+.scms .tag,.feature-number{background:color-mix(in srgb,var(--accent-soft) 10%,var(--panel));color:var(--muted);border-color:var(--line)}
+.scms-footer{background:var(--footer-bg);border-color:var(--line);color:var(--muted)}.scms-footer .scms-footer-label{color:var(--text)}.scms-footer-contact :is(a,bdi){color:var(--interactive-text)}
+.guest-home .guest-eyebrow,.scms .eyebrow{color:var(--muted)}
+.guest-hero::before{background:linear-gradient(90deg,color-mix(in srgb,var(--bg) 96%,transparent) 0%,color-mix(in srgb,var(--bg) 88%,transparent) 48%,color-mix(in srgb,var(--bg) 45%,transparent) 100%)}
+html[data-theme=light] .guest-hero::before{background:linear-gradient(90deg,color-mix(in srgb,var(--bg) 97%,transparent) 0%,color-mix(in srgb,var(--bg) 92%,transparent) 48%,color-mix(in srgb,var(--bg) 55%,transparent) 100%)}
+.guest-hero .chain-panel,html[data-theme=light] .guest-hero .chain-panel{background:color-mix(in srgb,var(--panel) 95%,transparent)}
+.tracking-summary,.tracking-history{background:var(--panel);border-color:var(--line)}.tracking-status,.tracking-icon{color:var(--interactive-text);background:color-mix(in srgb,var(--primary) 10%,transparent)}.tracking-status.is-delayed{color:var(--warning)}
+.tracking-progress li.is-current span,.scms .shipment-steps span.done,.scms .offer-calendar-grid button[aria-pressed=true],.scms .bell-count{background:var(--primary);color:var(--on-primary)}
+.tracking-progress li.is-complete{border-color:var(--primary)}
+.scms .logistics-map{background:var(--bg-2)}.scms .leaflet-geography-pane path{fill:var(--surface);stroke:var(--border)}
+html[data-theme=light] .scms .leaflet-geography-pane path{fill:var(--bg-secondary);stroke:var(--border)}
+.scms :is(.leaflet-popup-content-wrapper,.leaflet-popup-tip,.leaflet-control-attribution,.leaflet-bar a,.leaflet-control-scale-line,.city-label),html[data-theme=light] .scms :is(.leaflet-popup-content-wrapper,.leaflet-popup-tip,.leaflet-control-attribution,.leaflet-bar a,.leaflet-control-scale-line,.city-label){background:var(--panel-strong);color:var(--text);border-color:var(--line)}
+.scms .leaflet-bar a:hover{background:var(--hover);color:var(--interactive-text)}.scms .logistics-marker span{background:var(--primary);border-color:var(--secondary);box-shadow:0 0 0 5px color-mix(in srgb,var(--primary) 16%,transparent)}.scms .logistics-marker.high span{background:var(--warning);border-color:var(--warning)}.scms .logistics-marker.destination span{background:var(--secondary)}
+.scms .route-truck{background:var(--primary);color:var(--on-primary);border-color:var(--secondary);box-shadow:0 0 0 7px color-mix(in srgb,var(--primary) 16%,transparent)}
+.scms .saudi-dark-tiles{filter:grayscale(1) invert(1) brightness(.65)}html[data-theme=light] .scms .saudi-dark-tiles{filter:grayscale(1) sepia(.12)}
+.home-trend stop{stop-color:var(--primary)}.home-route-line{stroke:var(--primary)}.home-route-back{stroke:var(--secondary)}
+.scms .bar-track i,.home-progress>span{background:var(--primary)}
+.scms .offer-card,.home-offer-card{background:var(--panel)}.scms .offer-value,.home-offer-discount{color:var(--interactive-text)}
+.scms .alert-row{background:var(--panel);border-color:var(--divider)}
+.scms .confirm-submit,.confirm-submit{background:var(--error);color:var(--on-primary)}.confirm-submit:hover{background:color-mix(in srgb,var(--error) 85%,var(--bg-main))}
+.scms-confirm::backdrop{background:var(--overlay)}
+html[data-contrast=high]{--text-secondary:var(--text-main);--text-muted:var(--text-main);--border:var(--accent-soft);--interactive-text:var(--text-main)}

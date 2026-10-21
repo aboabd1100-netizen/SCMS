@@ -1,0 +1,16 @@
+**
+!requirements-production.lock
+!app/
+!app/**
+!migrations/
+!migrations/**
+!SC/
+!SC/**
+!run.py
+!gunicorn.conf.py
+!Dockerfile
+**/__pycache__/
+**/*.pyc
+**/*.md
+**/*.txt
+!requirements-production.lock

@@ -1,0 +1,604 @@
+{
+  "version": 2,
+  "revision": 0,
+  "settings": {
+    "company": "SCMS",
+    "currency": "SAR",
+    "capacityWarning": 85,
+    "stockWarningPercent": 120
+  },
+  "users": [
+    {
+      "id": "u-admin",
+      "name": "Abdullah Alharbi",
+      "email": "admin@scms.io",
+      "phone": "+966 11 000 0100",
+      "address": "Riyadh Distribution Hub",
+      "role": "Admin",
+      "accountType": "Internal",
+      "status": "Active",
+      "language": "en",
+      "preferences": {
+        "orders": true,
+        "shipments": true,
+        "offers": true,
+        "inventory": true
+      },
+      "lastLogin": null
+    },
+    {
+      "id": "u-customer",
+      "name": "Noura Alqahtani",
+      "email": "customer@scms.io",
+      "phone": "+966 50 000 0140",
+      "address": "Al Khobar Industrial Area, Khobar, Saudi Arabia",
+      "role": "Customer",
+      "accountType": "Business Customer",
+      "status": "Active",
+      "language": "en",
+      "preferences": {
+        "orders": true,
+        "shipments": true,
+        "offers": true,
+        "inventory": true
+      },
+      "lastLogin": null
+    }
+  ],
+  "suppliers": [
+    {
+      "id": "sup-1",
+      "name": "Najd Industrial Supply",
+      "contact": "Faisal Alotaibi",
+      "email": "sales@najd-supply.example",
+      "category": "Electronics",
+      "region": "Riyadh Industrial City, Riyadh",
+      "onTime": 96,
+      "quality": 98,
+      "status": "Active"
+    },
+    {
+      "id": "sup-2",
+      "name": "Jubail Equipment Supply",
+      "contact": "Khalid Alghamdi",
+      "email": "sales@jubail-equipment.example",
+      "category": "Machinery",
+      "region": "Jubail Industrial City, Jubail",
+      "onTime": 92,
+      "quality": 95,
+      "status": "Active"
+    },
+    {
+      "id": "sup-3",
+      "name": "Hijaz Packaging Supply",
+      "contact": "Sara Alzahrani",
+      "email": "sales@hijaz-packaging.example",
+      "category": "Packaging",
+      "region": "Al Khumrah Logistics Area, Jeddah",
+      "onTime": 88,
+      "quality": 91,
+      "status": "Review"
+    },
+    {
+      "id": "sup-4",
+      "name": "Al Khumrah Logistics Area, Jeddahern Safety Supply",
+      "contact": "Ahmed Aldosari",
+      "email": "sales@eastern-safety.example",
+      "category": "Safety",
+      "region": "Second Industrial City, Dammam",
+      "onTime": 94,
+      "quality": 97,
+      "status": "Active"
+    }
+  ],
+  "warehouses": [
+    {
+      "id": "wh-1",
+      "name": "Riyadh Distribution Hub",
+      "location": "Riyadh, Saudi Arabia",
+      "capacity": 3000,
+      "staff": 125,
+      "status": "Operational"
+    },
+    {
+      "id": "wh-2",
+      "name": "Dammam Cross-Dock",
+      "location": "Dammam, Saudi Arabia",
+      "capacity": 650,
+      "staff": 98,
+      "status": "Operational"
+    },
+    {
+      "id": "wh-3",
+      "name": "Jeddah Port Hub",
+      "location": "Jeddah, Saudi Arabia",
+      "capacity": 250,
+      "staff": 165,
+      "status": "Operational"
+    },
+    {
+      "id": "wh-4",
+      "name": "Medina Distribution Center",
+      "location": "Medina, Saudi Arabia",
+      "capacity": 800,
+      "staff": 0,
+      "status": "Operational"
+    },
+    {
+      "id": "wh-5",
+      "name": "Yanbu Industrial Hub",
+      "location": "Yanbu, Saudi Arabia",
+      "capacity": 1200,
+      "staff": 0,
+      "status": "Operational"
+    },
+    {
+      "id": "wh-6",
+      "name": "Jubail Supply Center",
+      "location": "Jubail, Saudi Arabia",
+      "capacity": 1500,
+      "staff": 0,
+      "status": "Operational"
+    },
+    {
+      "id": "wh-7",
+      "name": "Khobar Distribution Center",
+      "location": "Khobar, Saudi Arabia",
+      "capacity": 700,
+      "staff": 0,
+      "status": "Operational"
+    },
+    {
+      "id": "wh-8",
+      "name": "Tabuk Regional Hub",
+      "location": "Tabuk, Saudi Arabia",
+      "capacity": 600,
+      "staff": 0,
+      "status": "Operational"
+    }
+  ],
+  "products": [
+    {
+      "id": "p1",
+      "name": {
+        "en": "Industrial Battery Pack",
+        "ar": "مجموعة بطاريات صناعية"
+      },
+      "sku": "BAT-4401",
+      "category": "Electronics",
+      "cost": 90,
+      "price": 120,
+      "min": 200,
+      "supplierId": "sup-1",
+      "active": true,
+      "icon": "battery",
+      "description": {
+        "en": "Industrial power units for equipment and facility operations.",
+        "ar": "وحدات طاقة صناعية للمعدات وتشغيل المنشآت."
+      }
+    },
+    {
+      "id": "p2",
+      "name": {
+        "en": "Safety Gloves",
+        "ar": "قفازات السلامة"
+      },
+      "sku": "GLV-2108",
+      "category": "Safety",
+      "cost": 12,
+      "price": 18.5,
+      "min": 400,
+      "supplierId": "sup-4",
+      "active": true,
+      "icon": "shield",
+      "description": {
+        "en": "Protective gloves for warehouse handling and industrial work.",
+        "ar": "قفازات واقية لمناولة المستودعات والعمل الصناعي."
+      }
+    },
+    {
+      "id": "p3",
+      "name": {
+        "en": "Pallet Wrapping Film",
+        "ar": "غلاف تغليف المنصات"
+      },
+      "sku": "PKG-9903",
+      "category": "Packaging",
+      "cost": 30,
+      "price": 42,
+      "min": 100,
+      "supplierId": "sup-3",
+      "active": true,
+      "icon": "box",
+      "description": {
+        "en": "Protect and stabilize palletized goods during storage and transit.",
+        "ar": "حماية وتثبيت البضائع على المنصات أثناء التخزين والنقل."
+      }
+    },
+    {
+      "id": "p4",
+      "name": {
+        "en": "Industrial Sensor",
+        "ar": "مستشعر صناعي"
+      },
+      "sku": "SNS-3316",
+      "category": "Automation",
+      "cost": 65,
+      "price": 94,
+      "min": 20,
+      "supplierId": "sup-1",
+      "active": true,
+      "icon": "sensor",
+      "description": {
+        "en": "Equipment monitoring sensors for industrial automation.",
+        "ar": "مستشعرات مراقبة المعدات للأتمتة الصناعية."
+      }
+    },
+    {
+      "id": "p5",
+      "name": {
+        "en": "Forklift Tires",
+        "ar": "إطارات الرافعات الشوكية"
+      },
+      "sku": "TIR-4409",
+      "category": "Machinery",
+      "cost": 190,
+      "price": 260,
+      "min": 40,
+      "supplierId": "sup-2",
+      "active": true,
+      "icon": "wheel",
+      "description": {
+        "en": "Replacement tires for warehouse material-handling equipment.",
+        "ar": "إطارات بديلة لمعدات مناولة المواد في المستودعات."
+      }
+    }
+  ],
+  "stock": [
+    {
+      "productId": "p1",
+      "warehouseId": "wh-1",
+      "qty": 2460
+    },
+    {
+      "productId": "p2",
+      "warehouseId": "wh-2",
+      "qty": 380
+    },
+    {
+      "productId": "p3",
+      "warehouseId": "wh-1",
+      "qty": 0
+    },
+    {
+      "productId": "p4",
+      "warehouseId": "wh-1",
+      "qty": 15
+    },
+    {
+      "productId": "p5",
+      "warehouseId": "wh-3",
+      "qty": 210
+    }
+  ],
+  "purchaseOrders": [
+    {
+      "id": "PO-2048",
+      "supplierId": "sup-1",
+      "warehouseId": "wh-1",
+      "date": "2026-10-09",
+      "expected": "2026-10-19",
+      "status": "Pending Approval",
+      "items": [
+        {
+          "productId": "p4",
+          "qty": 60,
+          "cost": 65
+        }
+      ],
+      "history": [
+        {
+          "status": "Draft",
+          "at": "2026-10-15T10:04:51.458Z"
+        },
+        {
+          "status": "Pending Approval",
+          "at": "2026-10-15T10:04:51.458Z"
+        }
+      ]
+    },
+    {
+      "id": "PO-2051",
+      "supplierId": "sup-3",
+      "warehouseId": "wh-1",
+      "date": "2026-10-11",
+      "expected": "2026-10-18",
+      "status": "Ordered",
+      "items": [
+        {
+          "productId": "p3",
+          "qty": 200,
+          "cost": 30
+        }
+      ],
+      "history": [
+        {
+          "status": "Approved",
+          "at": "2026-10-15T10:04:51.458Z"
+        },
+        {
+          "status": "Ordered",
+          "at": "2026-10-15T10:04:51.458Z"
+        }
+      ]
+    }
+  ],
+  "orders": [
+    {
+      "id": "CO-1001",
+      "userId": "u-customer",
+      "date": "2026-10-13",
+      "address": "Al Khobar Industrial Area, Khobar, Saudi Arabia",
+      "status": "Pending",
+      "items": [
+        {
+          "productId": "p2",
+          "warehouseId": "wh-2",
+          "qty": 10,
+          "price": 18.5
+        }
+      ],
+      "subtotal": 185,
+      "discount": 0,
+      "shipping": 25,
+      "total": 210,
+      "offerId": null,
+      "history": [
+        {
+          "status": "Pending",
+          "at": "2026-10-15T10:04:51.458Z"
+        }
+      ]
+    },
+    {
+      "id": "CO-1002",
+      "userId": "u-customer",
+      "date": "2026-10-10",
+      "address": "Al Khobar Industrial Area, Khobar, Saudi Arabia",
+      "status": "Shipped",
+      "items": [
+        {
+          "productId": "p1",
+          "warehouseId": "wh-1",
+          "qty": 4,
+          "price": 120
+        }
+      ],
+      "subtotal": 480,
+      "discount": 0,
+      "shipping": 25,
+      "total": 505,
+      "offerId": null,
+      "history": [
+        {
+          "status": "Confirmed",
+          "at": "2026-10-15T10:04:51.458Z"
+        },
+        {
+          "status": "Processing",
+          "at": "2026-10-15T10:04:51.458Z"
+        },
+        {
+          "status": "Ready for Shipment",
+          "at": "2026-10-15T10:04:51.458Z"
+        },
+        {
+          "status": "Shipped",
+          "at": "2026-10-15T10:04:51.458Z"
+        }
+      ]
+    },
+    {
+      "id": "CO-1003",
+      "userId": "u-customer",
+      "date": "2026-10-05",
+      "address": "Al Khobar Industrial Area, Khobar, Saudi Arabia",
+      "status": "Delivered",
+      "items": [
+        {
+          "productId": "p5",
+          "warehouseId": "wh-3",
+          "qty": 2,
+          "price": 260
+        }
+      ],
+      "subtotal": 520,
+      "discount": 0,
+      "shipping": 25,
+      "total": 545,
+      "offerId": null,
+      "history": [
+        {
+          "status": "Shipped",
+          "at": "2026-10-15T10:04:51.458Z"
+        },
+        {
+          "status": "Delivered",
+          "at": "2026-10-15T10:04:51.458Z"
+        }
+      ]
+    }
+  ],
+  "shipments": [
+    {
+      "id": "SHP-1087",
+      "orderId": "CO-1002",
+      "poId": null,
+      "carrier": "Najd Freight (Demo)",
+      "origin": "Riyadh Distribution Hub",
+      "destination": "Al Khobar Industrial Area, Khobar, Saudi Arabia",
+      "departure": "2026-10-13",
+      "eta": "2026-10-17",
+      "status": "In Transit",
+      "history": [
+        {
+          "status": "Preparing",
+          "at": "2026-10-15T10:04:51.458Z"
+        },
+        {
+          "status": "In Transit",
+          "at": "2026-10-15T10:04:51.458Z"
+        }
+      ]
+    },
+    {
+      "id": "SHP-1089",
+      "orderId": "CO-1003",
+      "poId": null,
+      "carrier": "Red Sea Logistics (Demo)",
+      "origin": "Jeddah Port Hub",
+      "destination": "Al Khobar Industrial Area, Khobar, Saudi Arabia",
+      "departure": "2026-10-07",
+      "eta": "2026-10-10",
+      "status": "Delivered",
+      "history": [
+        {
+          "status": "Preparing",
+          "at": "2026-10-15T10:04:51.458Z"
+        },
+        {
+          "status": "In Transit",
+          "at": "2026-10-15T10:04:51.458Z"
+        },
+        {
+          "status": "Delivered",
+          "at": "2026-10-15T10:04:51.458Z"
+        }
+      ]
+    }
+  ],
+  "offers": [
+    {
+      "id": "offer-1",
+      "name": {
+        "en": "Saudi warehouse safety bulk savings",
+        "ar": "توفير على مستلزمات سلامة المستودعات السعودية"
+      },
+      "description": {
+        "en": "Save 10% on safety gloves when ordering at least 20 eligible units.",
+        "ar": "خصم 10% على قفازات السلامة عند طلب 20 وحدة مؤهلة على الأقل."
+      },
+      "type": "Percent",
+      "discount": 10,
+      "minQty": 20,
+      "productIds": [
+        "p2"
+      ],
+      "supplierId": "sup-4",
+      "start": "2026-10-10",
+      "end": "2026-11-09",
+      "code": "SAFETY10",
+      "enabled": true
+    },
+    {
+      "id": "offer-2",
+      "name": {
+        "en": "Domestic industrial equipment delivery",
+        "ar": "توصيل المعدات الصناعية داخل المملكة"
+      },
+      "description": {
+        "en": "Free delivery within Saudi Arabia on orders containing industrial battery packs.",
+        "ar": "توصيل مجاني داخل المملكة للطلبات التي تتضمن مجموعات البطاريات الصناعية."
+      },
+      "type": "Free Shipping",
+      "discount": 0,
+      "minQty": 1,
+      "productIds": [
+        "p1"
+      ],
+      "supplierId": "sup-1",
+      "start": "2026-10-12",
+      "end": "2026-10-30",
+      "code": "FREIGHTFREE",
+      "enabled": true
+    },
+    {
+      "id": "offer-3",
+      "name": {
+        "en": "Saudi distribution packaging offer",
+        "ar": "عرض التغليف للتوزيع داخل المملكة"
+      },
+      "description": {
+        "en": "Upcoming 8% discount on pallet wrapping film.",
+        "ar": "خصم قادم بنسبة 8% على غلاف تغليف المنصات."
+      },
+      "type": "Percent",
+      "discount": 8,
+      "minQty": 10,
+      "productIds": [
+        "p3"
+      ],
+      "supplierId": "sup-3",
+      "start": "2026-10-20",
+      "end": "2026-11-14",
+      "code": "PACK8",
+      "enabled": true
+    }
+  ],
+  "events": [
+    {
+      "id": "event-start",
+      "at": "2026-10-15T10:04:51.458Z",
+      "type": "System ready",
+      "message": {
+        "en": "Connected SCMS demonstration initialized.",
+        "ar": "تم تهيئة نموذج SCMS المترابط."
+      },
+      "userId": null,
+      "admin": true
+    },
+    {
+      "id": "event-co1001",
+      "at": "2026-10-13T12:00:00Z",
+      "type": "New Customer Order",
+      "message": {
+        "en": "CO-1001 submitted: 10 safety gloves reserved in Dammam.",
+        "ar": "تم إرسال CO-1001: حجز 10 قفازات سلامة في الدمام."
+      },
+      "userId": "u-customer",
+      "admin": true
+    },
+    {
+      "id": "event-co1002",
+      "at": "2026-10-13T10:00:00Z",
+      "type": "Order shipped",
+      "message": {
+        "en": "CO-1002 dispatched with Najd Freight (Demo) on SHP-1087.",
+        "ar": "تم إرسال CO-1002 مع ناقل نجد التجريبي في الشحنة SHP-1087."
+      },
+      "userId": "u-customer",
+      "admin": true
+    },
+    {
+      "id": "event-co1003",
+      "at": "2026-10-10T12:00:00Z",
+      "type": "Order delivered",
+      "message": {
+        "en": "CO-1003 delivered: forklift tires received by the customer.",
+        "ar": "تم تسليم CO-1003: استلم العميل إطارات الرافعات الشوكية."
+      },
+      "userId": "u-customer",
+      "admin": true
+    }
+  ],
+  "read": {},
+  "transfers": [],
+  "snapshots": [
+    {
+      "at": "2026-10-15T10:04:51.458Z",
+      "qty": 3065
+    }
+  ],
+  "saudiLocalization": 1,
+  "warehouseNetworkVersion": 1
+}

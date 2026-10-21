@@ -1,0 +1,11 @@
+.scms-footer{box-sizing:border-box;display:grid;grid-template-columns:1.1fr 1.2fr 1fr;align-items:start;gap:40px;width:min(1180px,calc(100% - 64px));margin-inline:auto;padding-block:36px 40px;border-top:1px solid var(--line);text-align:start;color:var(--muted);font-family:var(--font-primary);font-size:.78rem;line-height:1.7}
+.scms-footer[lang=ar]{font-family:var(--font-arabic)}
+.scms-footer>div,.scms-footer-contact{min-width:0}.scms-footer p{margin:8px 0;line-height:1.7}
+/* Official logo sizing and artwork are defined in logo.css. */
+.scms-footer .scms-footer-location{color:var(--soft);font-size:.73rem}
+.scms-footer .scms-footer-label{margin:0 0 16px;color:var(--gold);font-size:.68rem;font-weight:700;letter-spacing:.1em}.scms-footer[lang=ar] .scms-footer-label{letter-spacing:0}
+.scms-footer .scms-footer-designer{color:var(--text);font-size:.9rem}.scms-footer-designer strong{font-weight:600}.scms-footer-credit>p:last-child{max-width:290px;color:var(--soft)}
+.scms-footer-contact{font-style:normal}.scms-footer-contact a{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px;margin-bottom:12px;text-decoration:none;color:inherit}.scms-footer-contact a>span{color:var(--soft);font-size:.73rem}.scms-footer-contact bdi{color:var(--text);overflow-wrap:anywhere}.scms-footer-contact a:hover bdi{color:var(--gold)}
+.scms-footer a:focus-visible{outline:2px solid var(--gold);outline-offset:4px;border-radius:4px}
+@media(max-width:900px){.scms-footer{grid-template-columns:1fr 1fr;gap:28px}.scms-footer-identity{grid-column:1/-1}.scms-footer-credit>p:last-child{max-width:none}}
+@media(max-width:540px){.scms-footer{width:calc(100% - 36px);grid-template-columns:1fr;gap:24px;padding-block:28px}.scms-footer-identity{grid-column:auto}.scms-footer .scms-footer-label{margin-bottom:10px}}

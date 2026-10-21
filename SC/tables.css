@@ -1,0 +1,30 @@
+/* Size columns with the selected font; overflow belongs to the table viewport. */
+.scms .table-wrap {
+  width: 100%; max-width: 100%; min-width: 0; box-sizing: border-box;
+  overflow-x: auto; overscroll-behavior-inline: contain;
+}
+.scms .table-wrap:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.scms .table-wrap table { width: 100%; min-width: 100%; table-layout: auto; }
+.scms .table-wrap :is(th, td) {
+  padding: .8em .75em; font-size: 1rem; line-height: 1.6;
+  vertical-align: middle; text-align: start; word-break: normal; overflow-wrap: normal;
+}
+.scms .table-wrap th { white-space: nowrap; }
+.scms .table-wrap td { min-width: 6em; }
+.scms .table-wrap [data-column="product"] { min-width: 13em; }
+.scms .table-wrap [data-column="supplier"] { min-width: 12em; }
+.scms .table-wrap [data-column="warehouse"] { min-width: 12em; }
+.scms .table-wrap [data-column="name"] { min-width: 10em; }
+.scms .table-wrap td:is([data-column="product"], [data-column="supplier"], [data-column="warehouse"], [data-column="name"]) {
+  max-width: 24em; white-space: normal;
+}
+.scms .table-wrap [data-column="numeric"] { min-width: 4em; white-space: nowrap; }
+.scms .table-wrap :is([data-column="status"], [data-column="date"], [data-column="identifier"], [data-column="actions"]) { white-space: nowrap; }
+.scms .table-wrap [data-column="actions"] { width: 1%; }
+.scms .table-wrap .status { white-space: nowrap; width: max-content; max-width: none; flex-shrink: 0; }
+.scms .table-wrap :is(button, .primary-btn, .secondary-btn, .ghost-btn) {
+  white-space: nowrap; flex-shrink: 0; font-size: 1rem; padding: .5em .65em;
+}
+.scms .table-wrap .action-row { display: flex; flex-wrap: nowrap; width: max-content; gap: .6em; align-items: center; }
+/* Nested dashboard grids and form dialogs must also contain their table's width. */
+.scms .two-col > *, .scms .block { min-width: 0; }

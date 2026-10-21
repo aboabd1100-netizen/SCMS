@@ -1,0 +1,22 @@
+:root{color-scheme:dark;}
+:root[data-theme="light"]{color-scheme:light;}
+html,body{background:radial-gradient(ellipse at 80% 0%,color-mix(in srgb,var(--primary) 7.06%,transparent),transparent 45%),linear-gradient(180deg,var(--bg),var(--bg-2));color:var(--text)}
+.theme-toggle{display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;min-height:38px;padding:8px 12px;border:1px solid var(--line-strong);border-radius:10px;background:var(--panel);color:var(--gold);font:inherit;font-size:.76rem;cursor:pointer;white-space:nowrap;transition:transform .2s,background .2s}
+.theme-toggle:hover{transform:translateY(-1px);background:var(--card)}.theme-toggle:focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+html[data-theme="light"] .sidebar,html[data-theme="light"] .guest-header{background:color-mix(in srgb,var(--text-secondary) 90.00%,transparent)}
+html[data-theme="light"] :is(.panel,.scms .panel,.chain-panel,.guest-feature,.guest-promotion,.login-card){background:linear-gradient(145deg,color-mix(in srgb,var(--text-secondary) 69.02%,transparent),#ffffff30),var(--panel);box-shadow:var(--shadow)}
+html[data-theme="light"] :is(.toolbar,.select,.search-box,.user-pill,.icon-btn,.lang-switcher,.side-card){background:rgba(255,255,255,.65);border-color:var(--line)}
+html[data-theme="light"] .scms :is(input:not([type="checkbox"]),select,textarea,dialog,.profile-dropdown,.toast){background:var(--surface);color:var(--text)}
+html[data-theme="light"] .scms input[type="checkbox"]:not(:checked):not(:indeterminate){background:#fff;border-color:var(--gold)}
+html[data-theme="light"] :is(.donut::before,.ring::before,.scms .donut-visual::before){background:var(--surface)}
+html[data-theme="light"] :is(.bar-track,.shipment-steps span){background:var(--text-secondary)}
+html[data-theme="light"] :is(.chart,.chart-box){background-image:linear-gradient(color-mix(in srgb,var(--primary) 6.27%,transparent) 1px,transparent 1px);background-color:transparent}
+html[data-theme="light"] .status.good{color:var(--success)}html[data-theme="light"] .status.warn{color:var(--text-secondary)}html[data-theme="light"] .status.bad{color:var(--text-secondary)}html[data-theme="light"] .status.gray{color:var(--primary)}
+html[data-theme="light"] .scms :is(.leaflet-popup-content-wrapper,.leaflet-popup-tip,.leaflet-control-attribution,.leaflet-bar a,.leaflet-control-scale-line,.city-label){background:color-mix(in srgb,var(--text-secondary) 92.94%,transparent);color:var(--text);border-color:var(--line)}
+html[data-theme="light"] .scms .logistics-map{background:var(--text-secondary)}
+html[data-theme="light"] .guest-home{background:radial-gradient(ellipse at 80% 10%,color-mix(in srgb,var(--primary) 8.63%,transparent),transparent 45%),var(--bg)}
+html[data-theme="light"] .scms .panel.auth-card{box-shadow:0 24px 70px color-mix(in srgb,var(--primary) 9.41%,transparent)}
+.scms .primary-btn{background:linear-gradient(135deg,var(--primary),var(--primary))}
+@media(prefers-reduced-motion:reduce){.theme-toggle{transition:none}}
+
+html[data-theme="light"] .theme-toggle{background:var(--text-secondary);color:var(--primary)}html[data-theme="light"] .scms .bell-count{background:var(--gold-fill)}html[data-theme="light"] .scms .leaflet-control-attribution a{color:var(--gold)}
